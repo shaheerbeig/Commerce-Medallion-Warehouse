@@ -23,16 +23,11 @@ in Databricks.
     │   ├── 1_bronze_modelling.ipynb
     │   ├── gold_dimension.ipynb
     │   ├── silver_dimension.ipynb
-    │   └── fact_modelling/
-    │       ── bronze_dim.ipynb
+    ├── fact_modelling/
+    │       ├── bronze_dim.ipynb
     │       ├── final_BI_table.ipynb
     │       ├── gold_dim.ipynb
     │       └── silver_dim.ipynb
-    │
-    ├── bronze_dim.ipynb
-    ├── silver_dim.ipynb
-    ├── gold_dim.ipynb
-    ├── final_BI_table.ipynb
     │
     ├── Sales-Dashboard.lvdash.json   # Databricks SQL Dashboard export
     │
@@ -78,7 +73,7 @@ These are used to generate the Databricks dashboard.
 
 # 📊 Dashboard
 
-
+![Dashboard Preview](assets/dashboard.png)
 
 ------------------------------------------------------------------------
 
@@ -183,6 +178,3 @@ Databricks • Python • SQL • ETL • Airflow • Databricks
 
 ------------------------------------------------------------------------
 
-# 📝 License
-
-MIT License
