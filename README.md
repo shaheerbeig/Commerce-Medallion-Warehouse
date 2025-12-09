@@ -48,8 +48,8 @@ in Databricks.
 -   Minimal transformations.
 -   Ensures data lineage and reproducibility.
 
-**Tables Created:** - `ecommerce.bronze.orders_raw` -
-`ecommerce.bronze.customers_raw` - `ecommerce.bronze.products_raw`
+**Tables Created:** - `ecommerce.bronze.category_base_table` -
+`ecommerce.bronze.customers_base_table` - `ecommerce.bronze.products_base_table` - `ecommerce.bronze.brand_base_table` - `ecommerce.bronze.date_base_table`
 
 ------------------------------------------------------------------------
 
@@ -60,8 +60,8 @@ in Databricks.
 -   Removing duplicates
 -   Joining relevant entities
 
-**Tables Created:** - `ecommerce.silver.orders_clean` -
-`ecommerce.silver.customers_clean` - `ecommerce.silver.product_clean`
+**Tables Created:** -  `ecommerce.silver.category_base_table` -
+`ecommerce.silver.customers_base_table` - `ecommerce.silver.products_base_table` - `ecommerce.silver.brand_base_table` - `ecommerce.silver.date_base_table` - `ecommerce.silver.order_base_table`
 
 ------------------------------------------------------------------------
 
@@ -70,52 +70,15 @@ in Databricks.
 -   Aggregated for BI & reporting
 -   Fact & dimension tables created
 
-**Tables Created:** - `dim_customer` - `dim_product` - `dim_date` -
-`fact_sales`
+**Tables Created:** - `customer_dim` - `product_dim` - `date_dim`
 
 These are used to generate the Databricks dashboard.
 
 ------------------------------------------------------------------------
 
-# 🧩 Dimension & Fact Modeling
-
-### **Dimensions**
-
-Contain descriptive attributes:
-
--   `dim_customer` → customer details
--   `dim_product` → product metadata
--   `dim_date` → normalized date table
-
-### **Fact Table**
-
-`fact_sales` includes:
-
--   order_id\
--   customer_id\
--   product_id\
--   quantity\
--   price\
--   revenue\
--   order_date
-
-👍 Fully optimized for BI dashboards and SQL analytics.
-
-------------------------------------------------------------------------
-
 # 📊 Dashboard
 
-This repo includes:
 
-### ✔ JSON Export
-
-`Sales-Dashboard.lvdash.json`
-
-### ✔ Screenshot (recommended to add)
-
-Place it under:
-
-    assets/dashboard.png
 
 ------------------------------------------------------------------------
 
@@ -212,22 +175,11 @@ Your dashboard will be recreated automatically.
 
 ------------------------------------------------------------------------
 
-# 🤝 Contribution
-
-Feel free to fork, clone, or extend this project with:
-
--   Airflow / Workflows\
--   Unity Catalog lineage\
--   Streaming ingestion\
--   DBT modeling
-
-------------------------------------------------------------------------
-
 # ⭐ Author
 
 **Shaheer Beig**\
 Data Engineer \| Analytics Engineer\
-Databricks • Python • SQL • ETL • Delta Lake
+Databricks • Python • SQL • ETL • Airflow • Databricks
 
 ------------------------------------------------------------------------
 
